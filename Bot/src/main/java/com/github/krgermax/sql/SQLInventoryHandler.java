@@ -60,6 +60,7 @@ public class SQLInventoryHandler {
      */
     public void equipItem(String userID, int itemID) {
         try {
+            Main.LOGGER.info("Equipping item " + itemID + " for user " + userID);
             Connection connection = Main.bot.getSQLConnection();
             String sqlQuery = "UPDATE players SET "
                     + SQLManager.EQUIPPED_ITEM_COLUMN_LABEL + " = ? WHERE "

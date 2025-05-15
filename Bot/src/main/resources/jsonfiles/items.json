@@ -47,6 +47,18 @@
       "drop_chance": "0",
       "xp_multiplier": "1.2",
       "dmg_multiplier": "1.1"
+    },
+    {
+      "id": "5",
+      "name": "Bloody Dagger",
+      "emoji": ":dagger:",
+      "description": "Fresh from london",
+      "fileName": "bloody_dagger.png",
+      "reqLvl": "5",
+      "item_type": "WEAPON",
+      "drop_chance": "0",
+      "xp_multiplier": "1.2",
+      "dmg_multiplier": "1.2"
     }
   ]
 }

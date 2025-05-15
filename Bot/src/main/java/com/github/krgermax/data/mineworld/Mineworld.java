@@ -15,7 +15,6 @@ import net.dv8tion.jda.api.interactions.components.buttons.Button;
 import net.dv8tion.jda.api.utils.FileUpload;
 
 import java.awt.*;
-import java.io.File;
 import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.Iterator;

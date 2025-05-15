@@ -11,7 +11,6 @@ import net.dv8tion.jda.api.utils.FileUpload;
 import com.github.krgermax.main.Main;
 
 import java.awt.*;
-import java.io.File;
 import java.util.Objects;
 
 public class ItemCommand implements SlashCommand {

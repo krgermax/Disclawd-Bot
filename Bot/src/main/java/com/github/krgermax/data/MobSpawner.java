@@ -13,7 +13,6 @@ import net.dv8tion.jda.api.utils.FileUpload;
 import com.github.krgermax.main.Main;
 
 import java.awt.*;
-import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
