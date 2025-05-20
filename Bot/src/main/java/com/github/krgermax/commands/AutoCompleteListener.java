@@ -18,11 +18,22 @@ public class AutoCompleteListener extends ListenerAdapter {
     public static final String KILLS_OPTION_ID = "Kills";
     public static final String GOLD_OPTION_ID = "Gold";
     public static final String XP_OPTION_ID = "XP";
+
+    public static final String INVENTORY_ITEM_OPTION_ID = "Items";
+    public static final String INVENTORY_PET_OPTION_ID = "Pets";
+    public static final String INVENTORY_DROPS_OPTION_ID = "Drops";
+
     private final String[] rankOptions = new String[]{
             MINED_OPTION_ID,
             XP_OPTION_ID,
             GOLD_OPTION_ID,
             KILLS_OPTION_ID,
+    };
+
+    private final String[] invOptions = new String[]{
+            INVENTORY_ITEM_OPTION_ID,
+            INVENTORY_PET_OPTION_ID,
+            INVENTORY_DROPS_OPTION_ID,
     };
 
     /**
@@ -44,6 +55,14 @@ public class AutoCompleteListener extends ListenerAdapter {
          */
         if (event.getName().equals(CommandManager.ITEM_COMMAND_ID) && event.getFocusedOption().getName().equals(CommandManager.ITEM_COMMAND_OPTION_ID)) {
             List<Command.Choice> options = generateItemChoiceList(event, Main.shopManager.getItemList());
+            event.replyChoices(options).queue();
+        }
+
+        /*
+            Handles auto complete for the '/inventory' command
+         */
+        if (event.getName().equals(CommandManager.INV_COMMAND_ID) && event.getFocusedOption().getName().equals(CommandManager.INV_COMMAND_OPTION_ID)) {
+            List<Command.Choice> options = generateStringChoiceList(event, Stream.of(invOptions).toList());
             event.replyChoices(options).queue();
         }
     }

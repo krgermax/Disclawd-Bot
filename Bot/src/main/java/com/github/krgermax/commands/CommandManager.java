@@ -29,6 +29,7 @@ public class CommandManager extends ListenerAdapter {
      */
     public static final String ITEM_COMMAND_OPTION_ID = "name";
     public static final String RANK_COMMAND_OPTION_ID = "category";
+    public static final String INV_COMMAND_OPTION_ID = "category";
 
     public CommandManager() {
         this.commands = new HashMap<>();

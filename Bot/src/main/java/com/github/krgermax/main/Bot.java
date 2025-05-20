@@ -120,6 +120,13 @@ public class Bot {
                 .setDefaultPermissions(DefaultMemberPermissions.enabledFor(Permission.ADMINISTRATOR))
                 .queue();
         jda.upsertCommand(CommandManager.INV_COMMAND_ID, "Show me my stuff!")
+                .addOption(
+                        OptionType.STRING,
+                        CommandManager.INV_COMMAND_OPTION_ID,
+                        "The stuff I want to see :D",
+                        true,
+                        true
+                )
                 .queue();
         jda.upsertCommand(CommandManager.SHOP_COMMAND_ID, "List me everything you have")
                 .queue();

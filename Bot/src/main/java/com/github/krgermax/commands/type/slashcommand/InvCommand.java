@@ -12,6 +12,7 @@ public class InvCommand implements SlashCommand {
         if (!Main.sqlHandler.isUserRegistered(userID)) {
             Main.sqlHandler.registerUser(userID);
         }
+        // TODO check for inventory filter type, adjust inventory based on this type
         Main.inventoryManager.replyWithInventoryFirstEmbedded(event);
         Main.LOGGER.info("Executed '" + CommandManager.INV_COMMAND_ID + "' button");
     }
